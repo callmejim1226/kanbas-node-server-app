@@ -7,6 +7,9 @@ import cors from "cors";
 import session from "express-session";
 import SessionExercises from "./SessionExercises.js";
 import Users from "./Users/routes.js";
+import Lab5 from "./lab5.js";
+import CourseRoutes from "./Kanbas/courses/routes.js";
+import ModuleRoutes from "./Kanbas/modules/routes.js";
 
 const app = express();
 app.use(
@@ -25,10 +28,14 @@ app.use(
   })
 );
 
+CourseRoutes(app);
+ModuleRoutes(app);
+
 Hello(app);
+Lab5(app);
 Courses(app);
 Modules(app);
 SessionExercises(app);
 Users(app);
 
-app.listen(4000);
+app.listen(process.env.PORT || 4000);

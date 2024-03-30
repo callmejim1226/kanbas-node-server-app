@@ -1,4 +1,7 @@
 export default function Hello(app) {
+  function start(req, res) {
+    res.send('Welcome to Full Stack Development!');
+  }
   function sayHello(asd, res) {
     res.send("Hello, World!");
   }
@@ -40,6 +43,7 @@ export default function Hello(app) {
     res.send(`Result: ${result}`);
   }
 
+  app.get("/", start);
   app.get("/hello", sayHello);
   app.get("/todos", sendTodos);
   app.get("/add", add);
