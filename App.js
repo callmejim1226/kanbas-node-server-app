@@ -7,7 +7,7 @@ import cors from "cors";
 import session from "express-session";
 import SessionExercises from "./SessionExercises.js";
 import Users from "./Users/routes.js";
-import Lab5 from "./lab5.js";
+import Lab5 from "./Lab5.js";
 import CourseRoutes from "./Kanbas/courses/routes.js";
 import ModuleRoutes from "./Kanbas/modules/routes.js";
 
